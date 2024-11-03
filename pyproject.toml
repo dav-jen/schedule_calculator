@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "schedule_calculator"
+version = "0.1.0"
+description = "School schedule optimizer for managing drop-offs and pick-ups"
+authors = ["Davje <55234770+FeastlyDave@users.noreply.github.com>"]
+readme = "README.md"
+packages = [
+    { include = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+python-dotenv = "^1.0.1"
+pandas = "^2.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+scheduler = "src.scheduler:main"
+journey-calculator = "src.journey_calculator:main"
